@@ -1,24 +1,19 @@
-const http = require('http');
+const http = require("http");
 
-// const server = http.createServer((req, res) => {
-//     res.end("Hello from http server");
-    
-// });
-const users= [
-    { id: 1, name: "John" , email:"john@example.com"},
-    { id: 2, name: "Jane" , email:"jane@example.com"},
-    { id: 3, name: "Bob" , email:"bob@example.com"}
+const users=[
+    {id:1, name:"Devendra", email:"GZDlC@example.com"},
+    {id:2, name:"Ravi", email:"ravi@com"},
+    {id:3, name:"alex", email:"alex@com"},
+    {id:4, name:"vasu", email:"vasu@com"},
+]
 
-];
-
-const server = http.createServer((req, res) => {
+const server=http.createServer((req,res)=>{
     // console.log(req.url);
     // console.log(req.method);
-    // console.log(req.headers);
-
+    // console.log(req.headers)
     if(req.url=="/" && req.method=="GET"){
         res.writeHead(200, {"Content-Type": "text/html"});
-        res.write("<h1>Welcome to Home Page</h1>");
+        res.write("<h1>Welcome to Home P0age</h1>");
         res.end();
     }else if(req.url=="/about" && req.method=="GET"){
         res.writeHead(200, {"Content-Type": "text/html"});
@@ -32,15 +27,28 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, {"Content-Type": "application/json"});
         res.write(JSON.stringify(users));
         res.end();
+    }else if(req.url=="/users" && req.method=="POST"){
+        let body="";
+        req.on("data", (chunk) => {
+            body+=chunk;
+        });
+        req.on("end", () => {
+            const user=JSON.parse(body);
+            users.push(user);
+            res.writeHead(201, {"Content-Type": "application/json"});
+            res.write(JSON.stringify({"success":true, "message":"User Created Successfully", "user":user}));
+            res.end();
+        });
     }
     else{
         res.writeHead(404, {"Content-Type": "text/html"});
-        res.write("<h1>Page Not Found</h1>");
-        res.end();
+        res.write("<h1>404 Page Not Found</h1>");
+        res.write("Page not found")
+        res.end()
     }
-    
-});
+    // res.end()
+})
 
-server.listen(3000,()=>{
+server.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
