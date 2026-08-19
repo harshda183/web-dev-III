@@ -8,4 +8,4 @@ console.log(add(5, 10));
 console.log(subtract(10, 5));
 //console.log(os.ocpus().length); //core module
 
-//console.log(math.add(5, 10)); //local module
+//console.log(math.add(5, 10)); //localmodule
