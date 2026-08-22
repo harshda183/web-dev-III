@@ -10,7 +10,7 @@ const students = [
   { rollno: 5, name: "Sukhwinder", section: "Core-B" }
 ];
 
-// Read Operation
+/// Read Operation
 app.get("/students", (req, res) => {
   res.json(students);
 });
