@@ -6,6 +6,6 @@ import { add , subtract } from "./math.js"; //local module
 
 console.log(add(5, 10));
 console.log(subtract(10, 5));
-//console.log(os.ocpus().length); //core module
+console.log(os.ocpus().length); //core module
 
 //console.log(math.add(5, 10)); //localmodule
