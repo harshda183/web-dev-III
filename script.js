@@ -1,5 +1,5 @@
-// const math=require("./math.js"); //local module
-//const os=require("os"); //core module
+const math=require("./math.js"); //local module
+const os=require("os"); //core module
 const express=require("express"); //third party module
 
 import { add , subtract } from "./math.js"; //local module
