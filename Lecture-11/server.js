@@ -11,7 +11,7 @@ const students=[
     {rollNo:4, name:"kunal", section:"Core-B"},
     {rollNo:5, name:"sukhwinder", section:"Core-B"}
 ]
-///Read Operation
+///Read Operation//
 app.get("/students",(req,res)=>{
     res.json(students)
 })
