@@ -11,7 +11,7 @@ app.use(morgan())
 //     console.log("Request url:",req.url,"Method",req.method,"Time:", new Data().toLocate)
 //      res.send("Please give extended information.")
 //     next()
-/ }
+ }
 
 const apiMiddleware=(req,res,next)=>{
     const API_KEY=req.query.API_KEY;
