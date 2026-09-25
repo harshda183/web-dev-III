@@ -14,7 +14,7 @@ const getStudentById = (req, res) => {
             message: "student not found"
         });
     }
-
+//
     res.json({
         success: true,
         student
