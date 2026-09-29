@@ -1,8 +1,8 @@
-//const express=require("express");
+const express=require("express");
 const morgan=require("morgan");
 const app=express();
 const PORT=3000;
-
+//
 //using this single line to avoid writing 6-7 lines of code of logMiddlewareand app.use.
 app.use(morgan())
 
