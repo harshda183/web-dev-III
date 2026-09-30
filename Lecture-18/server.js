@@ -9,6 +9,7 @@ app.get('/', (req,res)=>{
         res.status(500).json({success:false, message:"Something went wrong"});
     }
 })
+//
 app.get("/:id", (req,res)=>{
     const id = req.params.id;
     try{
