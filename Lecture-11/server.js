@@ -15,7 +15,7 @@ const students=[
 app.get("/students",(req,res)=>{
     res.json(students)
 })
-//
+
 //Read operation with id//
 app.get("/students/:rollNo",(req,res)=>{
     const id=req.params.rollNo;
