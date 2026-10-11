@@ -3,7 +3,7 @@ const students = require("../data/studentData.js");
 const getStudents = (req, res) => {
     res.json(students);
 };
-//
+
 const getStudentById = (req, res) => {
     const id = req.params.rollNo;
     const student = students.find((student) => student.rollNo === Number(id));
