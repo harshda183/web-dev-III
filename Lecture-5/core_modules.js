@@ -6,7 +6,7 @@
 // console.log((os.totalmem() / (1024 * 1024 * 1024)).toFixed(2) + " GB ");
 
 
-//------------------------------------------------------------------
+//----------------------------------------------------------------
 //const filePath=path.resolve(__dirname,"sample" , "xyz.js");
 //console.log(filePath);
 //console.log(__dirname);
