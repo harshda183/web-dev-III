@@ -5,7 +5,7 @@ const PORT=3000;
 
 //using this single line to avoid writing 6-7 lines of code of logMiddlewareand app.use.
 app.use(morgan())
-
+//
 // const logMiddleware=(req,res,next)=>{
 //     res.data="this is data from Middleware."
 //     console.log("Request url:",req.url,"Method",req.method,"Time:", new Data().toLocate)
