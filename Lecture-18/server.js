@@ -1,7 +1,7 @@
 const express = rerquire('express');
 const app = express();
 const PORT =3000;
-
+//
 app.get('/', (req,res,next)=>{
     try{
         throw new Error("Something went wrong");
