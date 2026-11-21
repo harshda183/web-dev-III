@@ -7,7 +7,7 @@ const app = express();
 
 
 app.use(express.json())
-//Read Operation
+//Read Operation.
 app.get("/api/employees", async (req, res) => {
     try {
         const employees = await Employee.find();    
