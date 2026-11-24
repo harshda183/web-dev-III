@@ -4,7 +4,7 @@ const dotenv=require("dotenv")
 dotenv.config()
 const Employee=require("./model/employee.model.js")
 const app = express();
-//
+
 
 app.use(express.json())
 //Read Operation.
