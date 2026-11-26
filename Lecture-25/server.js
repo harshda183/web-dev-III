@@ -5,7 +5,7 @@ dotenv.config()
 const Employee=require("./model/employee.model.js")
 const app = express();
 
-
+//
 app.use(express.json())
 //Read Operation.
 app.get("/api/employees", async (req, res) => {
