@@ -1,6 +1,6 @@
 use("GoogleDB")
 
-// db.employee.insert(
+// db.employee.insert(//
 //     {
 //         empID: 101,
 //         Name: "Suresh",
